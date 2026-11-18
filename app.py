@@ -10,8 +10,12 @@ import pytesseract
 import io
 import fitz
 from PIL import Image
+import shutil
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = (
+    shutil.which("tesseract")
+    or r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+)
 
 # Load environment variables from .env
 load_dotenv()
