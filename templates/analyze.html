@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Message | UPI Rakshak</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">🛡 UPI Rakshak</div>
+        <p>AI-Powered UPI Fraud Awareness</p>
+    </header>
+
+    <nav class="sidebar">
+        <a href="/">▦ Dashboard</a>
+        <a class="active" href="/analyze">⌕ Analyze</a>
+        <a href="/history">◷ History</a>
+        <a href="/#safety">♧ Safety Tips</a>
+        <a href="/#about">ⓘ About</a>
+    </nav>
+
+    <main class="main-content">
+
+        <section class="analysis-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">MESSAGE CHECKER</p>
+                    <h2>Analyze a UPI Message</h2>
+                    <p>
+                        Paste a suspicious SMS or UPI message, or upload
+                        an image or PDF to check its warning signs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- DOCUMENT UPLOAD SECTION -->
+
+            <div class="upload-section">
+
+                <h3>Upload Screenshot or PDF</h3>
+
+                <p>
+                    Select a suspicious message screenshot or PDF document.
+                </p>
+
+                <input
+                    type="file"
+                    id="documentFile"
+                    accept=".png,.jpg,.jpeg,.pdf, image/png, image/jpeg, application/pdf"
+                >
+
+                <br><br>
+
+                <button
+                    type="button"
+                    id="extractBtn"
+                    class="primary-btn"
+                >
+                    📄 Extract & Analyze
+                </button>
+
+                <p id="uploadStatus" role="status">
+                    Supported formats: PNG, JPG, JPEG and PDF (maximum 5 MB).
+                </p>
+
+            </div>
+
+            <hr>
+
+            <!-- MANUAL MESSAGE INPUT -->
+
+            <h3>Or Paste Your Message</h3>
+
+            <textarea
+                id="message"
+                maxlength="2000"
+                placeholder="Paste your sample or suspicious message here..."
+            ></textarea>
+
+            <p id="charCount">0 / 2000</p>
+
+            <button id="analyzeBtn" class="primary-btn">
+                🛡 Analyze Now
+            </button>
+
+            <p class="status">● Ready to analyze</p>
+
+            <!-- ANALYSIS RESULT -->
+
+            <div id="result" class="result hidden">
+
+                <h2 id="resultTitle">Analysis Result</h2>
+
+                <div id="languageSection" class="hidden">
+
+                    <label id="languageLabel" for="resultLanguage">
+                        Choose Result Language:
+                    </label>
+
+                    <select id="resultLanguage">
+                        <option value="English">English</option>
+                        <option value="Kannada">ಕನ್ನಡ (Kannada)</option>
+                        <option value="Hindi">हिन्दी (Hindi)</option>
+                    </select>
+
+                    <p id="translationStatus"></p>
+
+                </div>
+
+                <p id="riskLevel"></p>
+                <p id="riskScore"></p>
+
+                <h3 id="warningTitle">Warning Signs</h3>
+                <ul id="riskFactors"></ul>
+
+                <h3 id="explanationTitle">AI Explanation</h3>
+                <p id="aiExplanation"></p>
+
+                <h3 id="recommendationTitle">Safety Recommendation</h3>
+                <p id="recommendation"></p>
+
+            </div>
+
+        </section>
+
+        <p class="safety-note">
+            ⚠️ Use sample messages only. Never enter your real UPI PIN,
+            OTP, password or other confidential banking information.
+            Uploaded text may be sent to the Groq AI service for analysis.
+        </p>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='analyze.js') }}"></script>
+
+</body>
+</html>

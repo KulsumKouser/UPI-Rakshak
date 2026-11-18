@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Rakshak | Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <span class="shield">🛡️</span>
+        <span>UPI <b>Rakshak</b></span>
+    </div>
+    <span class="tagline">AI-POWERED UPI FRAUD AWARENESS</span>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h3>UPI <span>Rakshak</span></h3>
+
+        <a class="active" href="/">▦ Dashboard</a>
+        <a href="/analyze">⌕ Analyze</a>
+        <a href="/history">◷ History</a>
+        <a href="#safety">♧ Safety Tips</a>
+        <a href="#about">ⓘ About</a>
+    </aside>
+
+    <main class="content">
+
+        <!-- Dashboard Welcome -->
+        <section class="hero" id="dashboard">
+            <p class="eyebrow">YOUR DIGITAL SAFETY COMPANION</p>
+
+            <h1>Check before you <span>click.</span></h1>
+
+            <p>
+                Identify suspicious UPI messages and payment links.
+                Understand the warning signs and stay safer online.
+            </p>
+
+            <a class="primary-btn" href="/analyze">
+                Analyze a Message →
+            </a>
+        </section>
+
+        <!-- About the Features -->
+        <section class="info-grid" id="safety">
+
+            <article class="info-card">
+                <span>🧠</span>
+                <h3>Smart Analysis</h3>
+                <p>
+                    Examine messages for suspicious patterns
+                    using rule-based checks and AI explanations.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <span>📊</span>
+                <h3>Risk Assessment</h3>
+                <p>
+                    Understand the potential risk level
+                    of a suspicious UPI message.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <span>🛡️</span>
+                <h3>Safety Guidance</h3>
+                <p>
+                    Learn how to identify warning signs
+                    and respond safely to suspicious messages.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- How It Works -->
+        <section class="analysis-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SIMPLE AND EASY</p>
+                    <h2>How It Works</h2>
+                </div>
+            </div>
+
+            <p><b>Step 1:</b> Open the Analyze page.</p>
+            <p><b>Step 2:</b> Enter a sample or suspicious UPI message.</p>
+            <p><b>Step 3:</b> Get a rule-based risk score and warning signs.</p>
+            <p><b>Step 4:</b> Read the AI explanation and safety recommendation.</p>
+            <p><b>Step 5:</b> Visit History to review previous analyses.</p>
+
+            <a class="primary-btn" href="/analyze">
+                Start Analyzing →
+            </a>
+
+        </section>
+
+        <!-- Safety Tips -->
+        <section class="analysis-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">STAY ALERT</p>
+                    <h2>Important UPI Safety Tips</h2>
+                </div>
+            </div>
+
+            <ul>
+                <li>Never share your UPI PIN or OTP with anyone.</li>
+                <li>Never enter your PIN to receive money.</li>
+                <li>Avoid clicking unknown payment links.</li>
+                <li>Verify payment requests before approving them.</li>
+                <li>Contact your bank through its official channels if you suspect fraud.</li>
+            </ul>
+
+        </section>
+
+        <!-- About -->
+        <footer id="about">
+            UPI Rakshak | Built by Team CodiFy
+
+            <p>
+                This is an awareness prototype. Its risk assessment
+                is not a guaranteed fraud detector.
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

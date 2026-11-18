@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis History | UPI Rakshak</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">🛡 UPI Rakshak</div>
+        <p>AI-Powered UPI Fraud Awareness</p>
+    </header>
+
+    <nav class="sidebar">
+        <a href="/">▦ Dashboard</a>
+        <a href="/analyze">⌕ Analyze</a>
+        <a class="active" href="/history">◷ History</a>
+        <a href="/#safety">♧ Safety Tips</a>
+        <a href="/#about">ⓘ About</a>
+    </nav>
+
+    <main class="main-content">
+
+        <section class="history-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR PREVIOUS CHECKS</p>
+                    <h2>Analysis History</h2>
+                    <p>View all the messages you have previously analyzed.</p>
+                </div>
+
+                <button id="refreshHistoryBtn" class="primary-btn">
+                    ↻ Refresh History
+                </button>
+            </div>
+
+            <div id="historyList">
+                <p>Loading analysis history...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='history.js') }}"></script>
+</body>
+</html>
